@@ -36,13 +36,12 @@ int main(){
 
     while(1){
         int choice;
-        // Added Peek and corrected the menu formatting
+        // MODIFIED: Simplified the menu
         printf("\n--- STACK MENU ---\n");
         printf("1. Push to stack\n");
         printf("2. Pop from stack\n");
         printf("3. Peek at top item\n");
-        printf("4. Destroy entire stack and exit\n");
-        printf("5. Exit\n");
+        printf("4. Exit\n"); // Changed
         printf("------------------\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -53,7 +52,6 @@ int main(){
                 printf("Enter the item to be pushed: ");
                 scanf("%d", &item);
                 
-                // Try to push the item and check if it was successful
                 if(push(stack, item)){
                     printf("Pushed %d to the stack. Current size: %d\n", item, stack->size);
                 } else {
@@ -63,8 +61,7 @@ int main(){
             }
             case 2: { // Pop
                 int popped_item;
-                // Try to pop the item and check if it was successful
-                if(pop(stack, &popped_item)){ // Pass the address of the variable
+                if(pop(stack, &popped_item)){
                     printf("Popped item: %d. Current size: %d\n", popped_item, stack->size);
                 } else {
                     printf("Error: Stack is empty. Nothing to pop.\n");
@@ -73,7 +70,6 @@ int main(){
             }
             case 3: { // Peek
                 int peeked_item;
-                // Try to peek and check if it was successful
                 if(peek(stack, &peeked_item)){
                     printf("Item at the top of the stack is: %d\n", peeked_item);
                 } else {
@@ -81,27 +77,19 @@ int main(){
                 }
                 break;
             }
-            case 4: { // Destroy and Exit
-                printf("Destroying the stack and exiting.\n");
+            case 4: { // Exit
+                // MODIFIED: Changed the output message
+                printf("Deleted stack to avoid memory leak and exiting.\n");
                 destroy_stack(stack);
                 return 0; // Exit the program
             }
-            case 5: { // Exit
-                printf("Exiting without destroying the stack (Note: this will cause a memory leak).\n");
-                // In a real application, you'd want to ensure cleanup happens.
-                // For this example, we show the difference from choice 4.
-                return 0;
-            }
             default: {
-                printf("Invalid choice. Please enter a number between 1 and 5.\n");
+                // MODIFIED: Updated the valid range
+                printf("Invalid choice. Please enter a number between 1 and 4.\n");
                 break;
             }
         }
     }
-
-    // This part is now unreachable due to the exit conditions in the loop,
-    // but it's good practice to have a final cleanup.
-    destroy_stack(stack);
     return 0;
 }
 
@@ -114,12 +102,12 @@ STACK *create_stack(int capacity){
 
     stack->collection = malloc(sizeof(int) * capacity);
     if(stack->collection == NULL){
-        free(stack); // Clean up the allocated stack structure if collection fails
+        free(stack);
         return NULL;
     }
 
     stack->capacity = capacity;
-    stack->size = 0; // The stack starts empty
+    stack->size = 0;
     return stack;
 }
 
@@ -146,7 +134,7 @@ bool push(STACK *stack, int item){
     if(is_full(stack)) return false;
 
     stack->collection[stack->size] = item;
-    stack->size++; // CORRECTED: Increment size *before* returning
+    stack->size++;
     return true;
 }
 
@@ -154,8 +142,8 @@ bool push(STACK *stack, int item){
 bool pop(STACK *stack, int *item){
     if(is_empty(stack)) return false;
 
-    stack->size--; // CORRECTED: Decrement size *first*
-    *item = stack->collection[stack->size]; // Get the item at the new top index
+    stack->size--;
+    *item = stack->collection[stack->size];
     return true;
 }
 
@@ -163,7 +151,6 @@ bool pop(STACK *stack, int *item){
 bool peek(STACK *stack, int *item){
     if(is_empty(stack)) return false;
 
-    // We look at the item at index size - 1
     *item = stack->collection[stack->size - 1];
     return true;
 }
