@@ -34,7 +34,7 @@ This repository serves as my personal archive. Here’s how I manage it:
 1.  **Cloning the Repository:**
     To get a local copy on my machine, I use:
     ```bash
-    git clone [https://github.com/nighaaaaal/GEC_PKD_IT.git](https://github.com/nighaaaaal/GEC_PKD_IT.git)
+    git clone https://github.com/nighaaaaal/GEC_PKD_IT.git
     ```
 
 2.  **Adding New Files:**
