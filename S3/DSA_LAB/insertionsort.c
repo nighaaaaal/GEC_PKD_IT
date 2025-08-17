@@ -1,13 +1,6 @@
 #include<stdio.h>
 #include<time.h>
 
-void swap(int *a, int *b)
-{
-    int temp;
-    temp = *a;
-    *a = *b;
-    *b = temp;
-}
 void insertionsort(int *arr,int size)
 {
     for (int i=1;i<size;i++)
