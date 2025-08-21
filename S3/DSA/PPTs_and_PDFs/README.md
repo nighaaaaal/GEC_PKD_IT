@@ -1,7 +1,7 @@
 # 📘 Data Structures Notes (ITT201)
 
-This repository provides **comprehensive PDF notes** for the course **ITT201 - Data Structures**.  
-They are invaluable for students of **Computer Science**, **Software Engineering**, or anyone preparing for **technical interviews**.
+This directory provides **comprehensive PDF notes** for the course **ITT201 - Data Structures**.  
+They are invaluable for students of **Information Technology**, **Computer Science**,  **Software Engineering**, or anyone preparing for **technical interviews**.
 
 ---
 
@@ -38,3 +38,10 @@ This repository acts as a **mirror** to make these excellent notes more accessib
 ---
 
 ## 📂 Repository Structure
+
+┣ 📄 DS_MODULE_1.pdf
+┣ 📄 DS_MODULE_2.pdf
+┣ 📄 DS_MODULE_3.pdf
+┣ 📄 DS_MODULE_4.pdf
+┣ 📄 DS_MODULE_5.pdf
+┗ 📜 README.md
