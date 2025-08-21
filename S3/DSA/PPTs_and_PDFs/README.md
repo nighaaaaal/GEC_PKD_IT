@@ -37,7 +37,7 @@ This repository acts as a **mirror** to make these excellent notes more accessib
 
 ---
 
-## 📂 Repository Structure
+## 📂 Directory Structure
 
 ┣ 📄 DS_MODULE_1.pdf
 ┣ 📄 DS_MODULE_2.pdf
