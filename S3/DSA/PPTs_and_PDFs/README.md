@@ -6,6 +6,7 @@ They are invaluable for students of **Information Technology**, **Computer Scien
 ---
 
 ## ✨ Features
+
 - 📑 Detailed, well-structured notes  
 - 🎓 Perfect for learning fundamentals & advanced topics  
 - 🧑‍💻 Helpful for exams, projects, and interviews  
@@ -13,6 +14,7 @@ They are invaluable for students of **Information Technology**, **Computer Scien
 ---
 
 ## 🙏 Acknowledgements
+
 A **heartfelt thank you** to **[Anoop S. K. M.](https://sites.google.com/site/skmanoop)** for creating and generously sharing these insightful notes.  
 
 - 👨‍🏫 **Assistant Professor**  
@@ -23,12 +25,14 @@ All intellectual property and credit for the content of the notes belong entirel
 ---
 
 ## 🌐 More from the Author
+
 You can explore more of his work on his official website:  
 🔗 [https://sites.google.com/site/skmanoop](https://sites.google.com/site/skmanoop)
 
 ---
 
 ## 📖 Usage
+
 This repository acts as a **mirror** to make these excellent notes more accessible.  
 
 - ✅ Feel free to use and share the notes  
@@ -38,6 +42,7 @@ This repository acts as a **mirror** to make these excellent notes more accessib
 ---
 
 ## 📂 Directory Structure
+
 ```text
  ┣ 📄 DS_MODULE_1.pdf
  ┣ 📄 DS_MODULE_2.pdf
