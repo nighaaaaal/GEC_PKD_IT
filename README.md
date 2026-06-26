@@ -71,6 +71,7 @@ This repository serves as my personal archive. Here’s how I manage it:
 ## 📝 Notes on Best Practices
 
 * **Ignoring Compiled Files:** For programming labs, I use a `.gitignore` file to exclude compiled executables (like `a.out`) and build directories from being pushed to the repository. This keeps the repo clean and focused on source code.
+
 * **Meaningful Commits:** I use clear commit messages to create a useful history of my work, making it easy to find specific files or changes later.
 
 This repository is a personal project for academic organization. Feel free to browse, but its primary purpose is for my own use.
